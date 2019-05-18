@@ -19,15 +19,20 @@ html, body {
   font-weight: bold;
   font-size: 1rem;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 50px auto 100px;
+  grid-template-rows: 700px auto auto 100px;
   grid-template-areas:
     "h h h h h h h h h h h h"
+    "a a a a a a a a a a a a"
     "c c c c c c c c c c c c"
     "f f f f f f f f f f f f";
 }
 
 header {
   grid-area: h;
+  background: url("https://images.unsplash.com/photo-1504293538349-0be9a181d474?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80") no-repeat center center fixed;
+  background-size: cover;
+  margin-bottom: 50px;
+
 }
 
 .content {
@@ -38,8 +43,36 @@ header {
   grid-gap: 20px;
 }
 
+.hero-text-box {
+  color: #fff;
+  font-size: 2em;
+}
+
+.hero-text {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 300px;
+  grid-template-areas:
+  ". l .";
+}
+
+.learning {
+  grid-area: l;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1, a {
+  margin: auto;
+}
+
 .footer {
   grid-area: f;
+}
+
+.about {
+  grid-area: a;
 }
 
 .navbar {
@@ -50,16 +83,16 @@ header {
   padding: 0 20px;
 }
 
-.logo,
 a {
   color: #f1f1f2;
 }
 
 .logo {
+  color: #ff5a09;
   display: grid;
   justify-content: start;
   align-content: center;
-  font-size: 10px;
+  font-size: 20px;
 }
 
 .links {
