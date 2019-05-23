@@ -1,7 +1,3 @@
-/* #f6f7eb
-#e94f37
-#393e41 */
-
 * {
   margin: 0;
   padding: 0;
@@ -9,136 +5,15 @@
 }
 
 html, body {
-  background-color: #e3dfdb;
-}
-
-.container {
-  height: 100%;
-  display: grid;
-  grid-gap: 1px;
-  font-weight: bold;
-  font-size: 1rem;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 350px 700px auto;
-  grid-template-areas:
-    "h h h h h h h h h h h h"
-    "a a a a a a a a a a a a"
-    "f f f f f f f f f f f f";
-}
-
-h1 {
-  border: 5px solid black;
-  padding: 5px;
-}
-
-header {
-  grid-area: h;
-  margin-bottom: 25px;
-}
-
-.about-projects {
-  grid-area: a;
-  margin-bottom: 25px;
-}
-
-.about-text {
-  grid-area: b;
-}
-
-.item1 {
-  grid-area: i;
-}
-
-.item2 {
-  grid-area: j;
-}
-
-.item3 {
-  grid-area: k;
-}
-
-.hero-text {
-  display: grid;
-  color: rgb(54, 52, 52);
-  font-size: 2em;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-template-rows: 250px;
-  align-items: center;
-  grid-template-areas:
-  ". g .";
-}
-
-.goal {
-  grid-area: g;
-  text-align: center;
-}
-
-.about-projects-items {
-  display: grid;
-  color: rgb(54, 52, 52);
-  font-size: 2em;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(3, 200px);
-  align-items: center;
-  grid-template-areas:
-  ". h h h h h . i i i i . ."
-  ". h h h h h . j j j j . ."
-  ". h h h h h . k k k k . .";
-}
-
-.about-text {
-  grid-area: h;
-  font-size: 1em;
-  height: 100%;
   background-color: #fff;
-  padding: 50px;
+  font-family: 'Cardo', serif;
 }
 
-.item1 {
-  grid-area: i;
-}
+/* HEADER SECTION */
 
-.item2 {
-  grid-area: j;
-}
-
-.item3 {
-  grid-area: k;
-}
-
-
-h1, a {
-  margin: auto;
-}
-
-.footer {
-  grid-area: f;
-  font-size: 2em;
-  background-color: #f1f0ee;
-}
-
-.social {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 70px 70px;
-  grid-template-areas:
-  ". . . . t . . l . . . ."
-  ". . . . e e e . . . . .";
-}
-
-.twitter {
-  grid-area: t;
-}
-.linkedin {
-  grid-area: l;
-}
-.email {
-  grid-area: e;
-}
-
+/* Navbar */
 .navbar {
   display: grid;
-  background-color: #f1f0ee;
   min-height: 100px;
   grid-auto-flow: column;
   grid-gap: 20px;
@@ -146,11 +21,11 @@ h1, a {
 }
 
 a {
-  color: rgb(54, 52, 52);
+  color: #a4b5c6;
 }
 
 .logo {
-  color: rgb(54, 52, 52);
+  color: #a4b5c6;
   display: grid;
   justify-content: start;
   align-content: center;
@@ -169,33 +44,221 @@ a {
   text-decoration: none;
 }
 
+/* Header */
+header {
+  grid-area: h;
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/hero3.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+h1, a {
+  margin: auto;
+}
+
+.hero-text {
+  display: grid;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 4em;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 100px);
+  align-items: center;
+  grid-template-areas:
+  "l . . . ."
+  ". t . . ."
+  ". . g . ."
+  ". . . o ."
+  ". . . . m";
+}
+
+.long,
+.term,
+.goal,
+.of,
+.mastery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.long {
+  grid-area: l;
+}
+
+.term {
+  grid-area: t;
+}
+
+.goal {
+  grid-area: g;
+}
+
+.of {
+  grid-area: o;
+}
+
+.mastery {
+  grid-area: m;
+}
+
+
+/* ABOUT - PROJECTS SECTION */
+
+.about-projects {
+  grid-area: a;
+  margin-bottom: 25px;
+}
+
+.about-text {
+  grid-area: b;
+}
+
 .item1 {
-  background-color: #939384;
+  grid-area: i;
+  background-color: #479761;
 }
 
 .item2 {
-  background-color: #7a7a6e;
+  grid-area: j;
+  background-color: #cebc81;
 }
 
 .item3 {
-  background-color: #626258;
+  grid-area: k;
+  background-color: #a16e83;
+}
+
+.about-projects-items {
+  display: grid;
+  color: rgb(54, 52, 52);
+  font-size: 2em;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  align-items: center;
+  grid-template-areas:
+  ". h h h h h . i i i i . ."
+  ". h h h h h . j j j j . ."
+  ". h h h h h . k k k k . .";
+}
+
+.about-text {
+  grid-area: h;
+  font-size: 1.5rem;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  line-height: 2rem;
 }
 
 .item1, .item2, .item3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 10px;
   height: 100%;
 }
 
-.item__title {
-  flex: 0 1 30%;
-  font-size: 1em;
-  text-align: center;
-}
-
 .item__title a {
   color: rgb(54, 52, 52);
+}
+
+/* FOOTER SECTION */
+
+.footer {
+  grid-area: f;
+  font-size: 2em;
+}
+
+.social {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 70px 70px;
+  grid-template-areas:
+  ". . . . t . . l . . . ."
+  ". . . . e e e e . . . .";
+}
+
+.twitter {
+  grid-area: t;
+}
+.linkedin {
+  grid-area: l;
+}
+.email {
+  grid-area: e;
+  font-size: 1rem;
+}
+
+ /* MEDIA QUERIES */
+
+@media screen and (max-width: 800px) {
+  .about-projects-items {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(4, 300px);
+    align-items: center;
+    grid-template-areas:
+    ". h ."
+    ". i ."
+    ". j ."
+    ". k .";
+  }
+
+  .container {
+    height: 100%;
+    display: grid;
+    grid-gap: 1px;
+    font-weight: bold;
+    font-size: 1rem;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "h h h h h h h h h h h h"
+      "a a a a a a a a a a a a"
+      "a a a a a a a a a a a a"
+      "a a a a a a a a a a a a"
+      "a a a a a a a a a a a a"
+      "f f f f f f f f f f f f";
+  }
+
+  .about-text {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .about-projects-items {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: repeat(4, 300px);
+    align-items: center;
+    grid-template-areas:
+    ". h ."
+    ". i ."
+    ". j ."
+    ". k .";
+  }
+
+  .social {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 70px 70px;
+    grid-template-areas:
+    ". . . . t . . l . . . ."
+    ". . . e e e e e e . . .";
+  }
+
+  .about-text {
+    font-size: .9rem;
+    line-height: 2rem;
+  }
 }
 
