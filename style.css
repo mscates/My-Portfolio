@@ -5,8 +5,9 @@
 }
 
 html, body {
-  background-color: #fff;
+  background-color: #d7cec7;
   font-family: 'Cardo', serif;
+  color: #fff;
 }
 
 /* HEADER SECTION */
@@ -20,12 +21,9 @@ html, body {
   padding: 0 20px;
 }
 
-a {
-  color: #a4b5c6;
-}
+
 
 .logo {
-  color: #a4b5c6;
   display: grid;
   justify-content: start;
   align-content: center;
@@ -34,6 +32,7 @@ a {
 
 .links {
   display: grid;
+  text-transform: uppercase;
   justify-content: end;
   align-content: center;
   grid-auto-flow: column;
@@ -42,111 +41,116 @@ a {
 
 a {
   text-decoration: none;
+  color: #565656;
 }
 
 /* Header */
 header {
-  grid-area: h;
-  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(images/hero3.jpeg);
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
+  height: 60vh;
 }
 
 h1, a {
   margin: auto;
 }
 
+h1 {
+  color: #76323f;
+}
+
+span {
+  color: #76323f;
+}
+
 .hero-text {
   display: grid;
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
-  color: #fff;
+  color: #565656;
   font-size: 4em;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 100px);
+  letter-spacing: .5rem;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(2, 200px);
   align-items: center;
   grid-template-areas:
-  "l . . . ."
-  ". t . . ."
-  ". . g . ."
-  ". . . o ."
-  ". . . . m";
+  ". p ."
+  ". p .";
 }
 
-.long,
-.term,
-.goal,
-.of,
-.mastery {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.long {
-  grid-area: l;
-}
-
-.term {
-  grid-area: t;
-}
-
-.goal {
-  grid-area: g;
-}
-
-.of {
-  grid-area: o;
-}
-
-.mastery {
-  grid-area: m;
+p {
+  grid-area: p;
 }
 
 
-/* ABOUT - PROJECTS SECTION */
+/* PROJECTS SECTION */
 
-.about-projects {
-  grid-area: a;
-  margin-bottom: 25px;
-}
-
-.about-text {
-  grid-area: b;
-}
-
-.item1 {
-  grid-area: i;
-  background-color: #479761;
-}
-
-.item2 {
-  grid-area: j;
-  background-color: #cebc81;
-}
-
-.item3 {
-  grid-area: k;
-  background-color: #a16e83;
-}
-
-.about-projects-items {
+.projects {
+  margin-top: 200px auto 100px;
   display: grid;
-  color: rgb(54, 52, 52);
-  font-size: 2em;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(3, 200px);
-  align-items: center;
-  grid-template-areas:
-  ". h h h h h . i i i i . ."
-  ". h h h h h . j j j j . ."
-  ". h h h h h . k k k k . .";
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 20px;
+  margin-top: 50px;
 }
+
+.projects .project-card {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+  background-color: #565656;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,.5);
+  overflow: hidden;
+}
+
+.projects .project-card .layer {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: calc(100% - 2px);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#baa795, #baa795);
+  transition: 0.5s;
+}
+
+.projects .project-card:hover .layer {
+  top: 0;
+}
+
+.projects .project-card .content {
+  position: relative;
+  z-index: 2;
+}
+
+.projects .project-card .content .details a {
+  color: #fff;
+}
+
+.projects .project-card:hover .content .details a {
+  transition: 0.6s;
+  color: black;
+}
+
+.projects .project-card .content p {
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+}
+
+.projects .project-card .image {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 10%;
+  overflow: hidden;
+}
+
+
 
 .about-text {
   grid-area: h;
-  font-size: 1.5rem;
+  font-size: 2rem;
   height: 100%;
   background-color: #fff;
   display: flex;
