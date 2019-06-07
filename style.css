@@ -113,6 +113,11 @@ p {
   top: 0;
 }
 
+.projects .project-card:hover .project-name2 {
+  opacity: 1;
+  color: #fff;
+}
+
 .projects .project-card .content {
   position: relative;
   z-index: 2;
@@ -125,6 +130,15 @@ p {
 .project-name {
   font-size: 3rem;
   letter-spacing: .1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-name2 {
+  opacity: 0;
+
 }
 
 .tic {
@@ -157,31 +171,20 @@ p {
   overflow: hidden;
 }
 
-
+.about {
+  margin-top: 50px;
+}
 
 .about-text {
-  grid-area: h;
+  color: #565656;
+  background-color: #fff;
   font-size: 2rem;
   height: 100%;
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 30px;
   line-height: 2rem;
-}
-
-.item1, .item2, .item3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  height: 100%;
-}
-
-.item__title a {
-  color: rgb(54, 52, 52);
 }
 
 /* FOOTER SECTION */
